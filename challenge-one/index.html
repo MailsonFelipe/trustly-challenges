@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Trustly</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+  </head>
+  <body>
+    <div class="_wrapper">
+      <div class="logo">
+        <img
+          src="https://cdn.pixabay.com/photo/2021/02/05/20/37/clock-5985786_960_720.png"
+          alt="clock"
+        />
+      </div>
+      <div class="title text _name">
+        World Clock
+      </div>
+      <div class="text">
+        Please, select one option to see currente date / time of listed time
+        zones:
+      </div>
+      <div class="p-3 mt-3">
+        <select id="list" class="checkbox mt-3">
+          <option id="0">Eastern Standard Time</option>
+          <option id="1">Coordinated Universal Time</option>
+          <option id="2">Central European Standard Time</option>
+        </select>
+        <!--Trigger-->
+        <button
+          onclick="get_choice()"
+          type="button"
+          class="_btn mt-3"
+          data-toggle="modal"
+          data-target="#id-modal"
+        >
+          SEE
+        </button>
+      </div>
+    </div>
+    <!-- Modal -->
+    <div class="modal fade" id="id-modal" tabindex="-1" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">
+              &times;
+            </button>
+            <h4 id="modal-title"></h4>
+          </div>
+          <div id="modal-body">
+            <p id="data"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="main.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  </body>
+</html>
